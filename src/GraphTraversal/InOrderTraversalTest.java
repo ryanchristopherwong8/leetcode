@@ -17,4 +17,14 @@ public class InOrderTraversalTest {
                 Arrays.asList(1,3,4,100,101,102));
         assertEquals(true, inOrderTraversal.result.equals(obj));
     }
+
+    @Test
+    public void buildBinaryTreeFromPreOrderAndInOrder() {
+        int[] preOrder = {10, 3, 1, 4, 15};
+        int[] inOrder = {1, 3, 4, 10, 15};
+        ConstructBinaryTreeFromPreOrderTraversal constructBinaryTree = new ConstructBinaryTreeFromPreOrderTraversal();
+        Node root = constructBinaryTree.buildTree(preOrder, inOrder);
+        assertEquals(root.data==10, true);
+
+    }
 }
